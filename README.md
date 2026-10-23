@@ -30,6 +30,21 @@ npm run preview
 
 La carpeta `dist/` se puede publicar en cualquier hosting estático.
 
+## Deploy
+
+El sitio se publica en EasyPanel como servicio nginx con los archivos de `dist/`
+montados uno a uno. El script compila, reemplaza esos mounts y relanza el deploy:
+
+```bash
+EASYPANEL_URL=http://<host>:3000 \
+EASYPANEL_TOKEN=<token> \
+npm run deploy
+```
+
+Variables opcionales: `EASYPANEL_PROJECT` (default `automatiza`) y
+`EASYPANEL_SERVICE` (default `guia-html`). El token se lee del entorno y nunca
+se guarda en el repositorio.
+
 ## Controles
 
 | Acción | Teclado | Táctil |
