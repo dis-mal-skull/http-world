@@ -3,3 +3,7 @@ dist/
 .shots/
 .DS_Store
 *.log
+.env
+.env.*
+*.pem
+*.key
